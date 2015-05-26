@@ -9,7 +9,7 @@ Pushbullet token&#13;
 Number of backup copies&#13;
 </Description>
   <Registry>https://registry.hub.docker.com/u/soana/backupsql/</Registry>
-  <Repository>soana/BackupSQL</Repository>
+  <Repository>soana/backupsql</Repository>
   <BindTime>true</BindTime>
   <Privileged>true</Privileged>
   <Environment>
