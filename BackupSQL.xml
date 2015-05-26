@@ -8,7 +8,7 @@ Cron parameters&#13;
 Pushbullet token&#13;
 Number of backup copies&#13;
 </Description>
-  <Registry>https://registry.hub.docker.com/u/soana/BackupSQL/</Registry>
+  <Registry>https://registry.hub.docker.com/u/soana/backupsql/</Registry>
   <Repository>soana/BackupSQL</Repository>
   <BindTime>true</BindTime>
   <Privileged>true</Privileged>
@@ -64,7 +64,7 @@ Number of backup copies&#13;
   </Data>
   <Version>27eb8e69</Version>
   <WebUI></WebUI>
-  <Banner>https://raw.githubusercontent.com/soana/bkpsqldb/master/banner.png</Banner>
-  <Icon>https://raw.githubusercontent.com/soana/bkpsqldb/master/icon.png</Icon>
+  <Banner>https://raw.githubusercontent.com/soana/unraid-docker-templates/edit/master/BackupSQL-banner.png</Banner>
+  <Icon>https://raw.githubusercontent.com/soana/unraid-docker-templates/edit/master/BackupSQL-icon.png</Icon>
   <ExtraParams></ExtraParams>
 </Container>
