@@ -35,11 +35,11 @@ Number of backup copies&#13;
     </Variable>
     <Variable>
       <Name>MySQLIP</Name>
-      <Value>192.168.0.xx</Value>
+      <Value>192.168.0.40</Value>
     </Variable>
     <Variable>
       <Name>TOKEN</Name>
-      <Value>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</Value>
+      <Value>yZnLX3UMx2krfSph3RnbVZDRCA8Zt9qP</Value>
     </Variable>
     <Variable>
       <Name>BackupCopies</Name>
