@@ -56,11 +56,6 @@ Number of backup copies&#13;
       <ContainerDir>/backup</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
-    <Volume>
-      <HostDir>/mnt/cache/Apps/MySQL/config/</HostDir>
-      <ContainerDir>/config</ContainerDir>
-      <Mode>rw</Mode>
-    </Volume>
   </Data>
   <Version>27eb8e69</Version>
   <WebUI></WebUI>
