@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Container>
+  <Beta>False</Beta>
+  <Category>Backup:</Category>
   <Name>BackupSQL</Name>
   <Description>Cron backup of MySQL database.&#13;
 Pleasae specify:&#13;
@@ -63,3 +65,5 @@ Number of backup copies&#13;
   <Icon>https://raw.githubusercontent.com/soana/backupsql/master/BackupSQL-icon.png</Icon>
   <ExtraParams></ExtraParams>
 </Container>
+
+
