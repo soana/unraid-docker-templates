@@ -3,6 +3,7 @@
   <Beta>False</Beta>
   <Category>Backup:</Category>
   <Name>BackupSQL</Name>
+  <Support>http://lime-technology.com/forum/index.php?topic=40386.0</Support>
   <Description>Cron backup of MySQL database.&#13;
 Pleasae specify:&#13;
 IP of the SQL server.&#13;
