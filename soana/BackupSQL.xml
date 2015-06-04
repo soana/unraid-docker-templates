@@ -40,6 +40,14 @@ Number of backup copies&#13;
       <Name>MySQLIP</Name>
       <Value>192.168.99.99</Value>
     </Variable>
+   <Variable>
+      <Name>SQL_userid</Name>
+      <Value>root</Value>
+    </Variable>
+   <Variable>
+      <Name>SQL_password</Name>
+      <Value></Value>
+    </Variable>
     <Variable>
       <Name>TOKEN</Name>
       <Value>xxxxxxxxxxxxxxxxx</Value>
@@ -50,7 +58,7 @@ Number of backup copies&#13;
     </Variable>
   </Environment>
   <Networking>
-    <Mode>bridge</Mode>
+    <Mode>host</Mode>
     <Publish/>
   </Networking>
   <Data>
