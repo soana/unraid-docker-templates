@@ -45,10 +45,6 @@ Number of backup copies&#13;
       <Value>root</Value>
     </Variable>
    <Variable>
-      <Name>SQL_password</Name>
-      <Value></Value>
-    </Variable>
-    <Variable>
       <Name>TOKEN</Name>
       <Value>xxxxxxxxxxxxxxxxx</Value>
     </Variable>
