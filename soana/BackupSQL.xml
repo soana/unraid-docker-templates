@@ -63,7 +63,7 @@ Number of backup copies&#13;
   </Networking>
   <Data>
     <Volume>
-      <HostDir>/mnt/cache/Apps/MySQL/Backup/</HostDir>
+      <HostDir>/mnt/user/appdata/MySQL/Backup/</HostDir>
       <ContainerDir>/backup</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
