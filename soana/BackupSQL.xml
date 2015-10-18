@@ -42,11 +42,11 @@ Number of backup copies&#13;
     </Variable>
    <Variable>
       <Name>SQL_userid</Name>
-      <Value>root</Value>
+      <Value>xbmc</Value>
     </Variable>
        <Variable>
       <Name>SQL_pwd</Name>
-      <Value>root</Value>
+      <Value>xbmc</Value>
     </Variable>
    <Variable>
       <Name>TOKEN</Name>
