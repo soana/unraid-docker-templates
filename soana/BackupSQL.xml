@@ -44,6 +44,10 @@ Number of backup copies&#13;
       <Name>SQL_userid</Name>
       <Value>root</Value>
     </Variable>
+       <Variable>
+      <Name>SQL_pwd</Name>
+      <Value>root</Value>
+    </Variable>
    <Variable>
       <Name>TOKEN</Name>
       <Value>xxxxxxxxxxxxxxxxx</Value>
