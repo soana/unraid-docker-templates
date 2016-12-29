@@ -1,77 +1,117 @@
-<?xml version="1.0" encoding="utf-8"?>
-<Container>
-  <Beta>False</Beta>
-  <Category>Backup:</Category>
-  <Name>BackupSQL</Name>
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>MythTVhb</Name>
+  <Repository>soana/mythtvhb</Repository>
+  <Registry>https://registry.hub.docker.com/u/soana/mythtvhb/</Registry>
+  <Network>host</Network>
+  <Privileged>false</Privileged>
   <Support>http://lime-technology.com/forum/index.php?topic=40386.0</Support>
-  <Description>Cron backup of MySQL database.&#13;
-Pleasae specify:&#13;
-IP of the SQL server.&#13;
-Cron parameters&#13;
-Pushbullet token&#13;
-Number of backup copies&#13;
+  <Overview>Adds Handbrake to Sparklyballs container&#xD;
+</Overview>
+  <Category>Backup:</Category>
+  <WebUI>http://[IP]:[PORT:6760]/</WebUI>
+  <TemplateURL/>
+  <Icon>http://i.imgur.com/8co6Sip.png</Icon>
+  <ExtraParams/>
+  <DateInstalled>1482988688</DateInstalled>
+  <Description>Adds Handbrake to Sparklyballs container&#xD;
 </Description>
-  <Registry>https://registry.hub.docker.com/u/soana/MythTVhb/</Registry>
-  <Repository>soana/MythTVhb</Repository>
-  <BindTime>true</BindTime>
-  <Privileged>true</Privileged>
-  <Environment>
-    <Variable>
-      <Name>bkpMinute</Name>
-      <Value>0</Value>
-    </Variable>
-    <Variable>
-      <Name>bkpHour</Name>
-      <Value>3</Value>
-    </Variable>
-    <Variable>
-      <Name>bkpDayOfMonth</Name>
-      <Value>*</Value>
-    </Variable>
-    <Variable>
-      <Name>bkpMonth</Name>
-      <Value>*</Value>
-    </Variable>
-    <Variable>
-      <Name>bkpDayOfWeek</Name>
-      <Value>*</Value>
-    </Variable>
-    <Variable>
-      <Name>MySQLIP</Name>
-      <Value>192.168.99.99</Value>
-    </Variable>
-   <Variable>
-      <Name>SQL_userid</Name>
-      <Value>xbmc</Value>
-    </Variable>
-       <Variable>
-      <Name>SQL_pwd</Name>
-      <Value>xbmc</Value>
-    </Variable>
-   <Variable>
-      <Name>TOKEN</Name>
-      <Value>xxxxxxxxxxxxxxxxx</Value>
-    </Variable>
-    <Variable>
-      <Name>BackupCopies</Name>
-      <Value>7</Value>
-    </Variable>
-  </Environment>
   <Networking>
     <Mode>host</Mode>
-    <Publish/>
+    <Publish>
+      <Port>
+        <HostPort>6760</HostPort>
+        <ContainerPort>6760</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>3310</HostPort>
+        <ContainerPort>3310</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>3389</HostPort>
+        <ContainerPort>3389</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>5000</HostPort>
+        <ContainerPort>5000</ContainerPort>
+        <Protocol>udp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>5002</HostPort>
+        <ContainerPort>5002</ContainerPort>
+        <Protocol>udp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>5004</HostPort>
+        <ContainerPort>5004</ContainerPort>
+        <Protocol>udp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>6543</HostPort>
+        <ContainerPort>6543</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>6544</HostPort>
+        <ContainerPort>6544</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>65001</HostPort>
+        <ContainerPort>65001</ContainerPort>
+        <Protocol>udp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>65001</HostPort>
+        <ContainerPort>65001</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
   </Networking>
   <Data>
     <Volume>
-      <HostDir>/mnt/user/appdata/MySQL/Backup/</HostDir>
-      <ContainerDir>/backup</ContainerDir>
+      <HostDir>/mnt/user/appdata/MythTV/home</HostDir>
+      <ContainerDir>/home/mythtv</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/MythTV/db/</HostDir>
+      <ContainerDir>/db</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/MythTV</HostDir>
+      <ContainerDir>/var/lib/mythtv</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/transfer2array/MythTV-recordings</HostDir>
+      <ContainerDir>/recordings</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/MythTV/scripts/</HostDir>
+      <ContainerDir>/scripts</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
   </Data>
-  <Version>27eb8e69</Version>
-  <WebUI></WebUI>
-  <Banner>https://raw.githubusercontent.com/soana/backupsql/master/BackupSQL-banner.png</Banner>
-  <Icon>https://raw.githubusercontent.com/soana/backupsql/master/BackupSQL-icon.png</Icon>
-  <ExtraParams></ExtraParams>
+  <Environment/>
+  <Config Name="Host Port 1" Target="6760" Default="6760" Mode="tcp" Description="n/a" Type="Port" Display="always" Required="true" Mask="false">6760</Config>
+  <Config Name="Host Port 2" Target="3310" Default="3310" Mode="tcp" Description="n/a" Type="Port" Display="always" Required="true" Mask="false">3310</Config>
+  <Config Name="Host Port 3" Target="3389" Default="3389" Mode="tcp" Description="n/a" Type="Port" Display="always" Required="true" Mask="false">3389</Config>
+  <Config Name="Host Port 4" Target="5000" Default="5000" Mode="udp" Description="n/a" Type="Port" Display="always" Required="true" Mask="false">5000</Config>
+  <Config Name="Host Port 5" Target="5002" Default="5002" Mode="udp" Description="n/a" Type="Port" Display="always" Required="true" Mask="false">5002</Config>
+  <Config Name="Host Port 6" Target="5004" Default="5004" Mode="udp" Description="n/a" Type="Port" Display="always" Required="true" Mask="false">5004</Config>
+  <Config Name="Host Port 7" Target="6543" Default="6543" Mode="tcp" Description="n/a" Type="Port" Display="always" Required="true" Mask="false">6543</Config>
+  <Config Name="Host Port 8" Target="6544" Default="6544" Mode="tcp" Description="n/a" Type="Port" Display="always" Required="true" Mask="false">6544</Config>
+  <Config Name="Host Port 9" Target="65001" Default="65001" Mode="udp" Description="n/a" Type="Port" Display="always" Required="true" Mask="false">65001</Config>
+  <Config Name="Host Port 10" Target="65001" Default="65001" Mode="tcp" Description="n/a" Type="Port" Display="always" Required="true" Mask="false">65001</Config>
+  <Config Name="Host Path 1" Target="/home/mythtv" Default="" Mode="rw" Description="Container Path: /home/mythtv" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/MythTV/home</Config>
+  <Config Name="Host Path 2" Target="/db" Default="" Mode="rw" Description="Container Path: /db" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/MythTV/db/</Config>
+  <Config Name="Host Path 3" Target="/var/lib/mythtv" Default="" Mode="rw" Description="Container Path: /var/lib/mythtv" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/MythTV</Config>
+  <Config Name="Recordings" Target="/recordings" Default="" Mode="rw" Description="Container Path: /recordings" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/transfer2array/MythTV-recordings</Config>
+  <Config Name="Host Path 5" Target="/scripts" Default="" Mode="rw" Description="Container Path: /scripts" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/MythTV/scripts/</Config>
 </Container>
-
